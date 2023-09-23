@@ -2,7 +2,7 @@
 //public class / class es lo mismo
 
 //variable int num por defecto publico int num
-//libreria
+//Libreria
 import java.io.*;
 
 
@@ -13,10 +13,9 @@ class Entradadetexto{
      * @param args
      * @throws IOException
      */
-    public static void mian (String[]args) throws IOException{}
-    
-    public static void main(String[] arg){
-        //debemos de crear una estructura basica 
+    public static void mian (String[]args) throws IOException{
+
+        //debemos de crear  estructura basica
         //declaracion
         String nombre ;
         //mensaje para el usuario
@@ -34,7 +33,7 @@ class Entradadetexto{
         System.out.println("Hola " + nombre + " Bienvenido a tronar wiii ");
 
 
-
     }
+
 
 } 
