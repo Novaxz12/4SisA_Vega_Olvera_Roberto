@@ -260,18 +260,194 @@ class EstructuraControl{
                      }
                     break;
                 case 7:
-                    break;
-                case 8:
+                class ModeloDatos extends AbstractTableModel {
+                    Object datos[][] = {
+                      {"uno","dos","tres","cuatro"},
+                      {"cinco","seis","siete","ocho"},
+                      {"nueve","diez","once","doce"},
+                     };
+                      class TablaListener implements TableModelListener {
+                      public void tableChanged( TableModelEvent evt ) {
+                       for( int i=0; i < datos.length; i++ ) {
+                           for( int j=0; j < datos[0].length; j++ )
+                              System.out.print( datos[i][j] + " " );
+                              System.out.println();
+                        }
+                       }
+                      }
+                     ModeloDatos() {
+                     addTableModelListener( new TablaListener() );
+                     }
+                     public int getColumnCount() { 
+                     return( datos[0].length ); 
+                     }
+                     public int getRowCount() { 
+                     return( datos.length );
+                     }
+                     public Object getValueAt( int fila,int col ) { 
+                     return( datos[fila][col] ); 
+                     }
+                     public void setValueAt( Object valor,int fila,int col ) {
+                     datos[fila][col] = valor;
+                     fireTableDataChanged();
+                     }
+                     public boolean isCellEditable( int fila,int col ) { 
+                     return( true ); 
+                     }
+                     }       
+                     public class java1416 extends JPanel {
+                     public java1416() {
+                     setLayout( new BorderLayout() );
+                     JTable tabla = new JTable( new ModeloDatos() );
+                     JScrollPane panel = new JScrollPane( tabla );
+                     add( panel,BorderLayout.CENTER );
+                     }
+                     public static void main(String args[]) {
+                     JFrame frame = new JFrame( "Tutorial de Java, Swing" );
+                     frame.addWindowListener( new WindowAdapter() {
+                     public void windowClosing( WindowEvent evt ) {
+                     System.exit( 0 );
+                     }
+                     } );
+                     frame.getContentPane().add( new java1416(),BorderLayout.CENTER );
+                     frame.setSize( 200,200 );
+                     frame.setVisible( true );
+                     }
+            }
                     break;
                 case 9:
+                System.out.print("Introduce un numero entero >= 0: ");
+                 n = entrada.nextInt();
+                 if(n > 0){
+                   for (int i = 1; i <= n; i++) {
+                   factorial = factorial * i;
+                   System.out.printf("%d! = %.0f %n", n, factorial);
+                  }
+                  }else(n <= 0) {
+                     System.out.println("Ingresa un Numero Mayor a 0");
+        }
                     break;
                 case 10:
+                import java.util.Scanner;
+
+public class CuadradoAsteriscos {
+    public static void main(String[] args) {
+        
+       
+Scanner entrada = new Scanner(System.in);
+        
+        // Solicitar al usuario ingresar el lado del cuadrado
+        System.out.print(
+        System.out.print
+
+        System.out
+
+       
+"Ingrese el lado del cuadrado (entre 1 y 20): ");
+        int lado = entrada.nextInt();
+        
+        // Verificar que el lado esté en el rango válido
+        if (lado < 1 || lado > 20) {
+            System.out.println(
+          
+
+           
+"El lado debe estar en el rango de 1 a 20.");
+        } 
+       
+else {
+            // Imprimir el cuadrado de asteriscos
+            for (int i = 1; i <= lado; i++) {
+                for (int j = 1; j <= lado; j++) {
+                    System.out.print(
+                   
+
+                   
+"* ");
+                }
+                System.out.println(); 
+                }
+              
+
+                }
+               
+
+               
+// Salto de línea al final de cada fila
+            }
+        }
+        
+        entrada.close();
+    }
+}
                     break;
                 case 11:
+               System.out.println("Ingrese el Ancho del Rectangulo");
+                      int ancho = entrada.nextInt();
+                      System.out.println("Ingrese la Altura del Rectangulo");
+                      int altura = entrada.nextInt();
+                      for(int fila = 1; fila <= altura; fila++){
+                        for(int columna = 1; columna <= ancho; columna++){
+                           if(fila == 1 || fila == alto || columna == 1 || columna == ancho){
+                              System.out.println("°");
+                           }else{
+                              System.out.println(" ");
+                           }
+                        System.out.println("°");
+                        }
+                        System.out.println("");
+                }
                     break;
                 case 12:
+                
                     break;
                 case 13:
+                import java.util.Scanner;
+public class Calculadora {
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ 
+ System.out.print("Ingrese el primer número: ");
+ double num1 = scanner.nextDouble();
+ 
+ System.out.print("Ingrese el segundo número: ");
+ double num2 = scanner.nextDouble();
+ 
+ System.out.println("Seleccione la operación:");
+ System.out.println("1. Suma");
+ System.out.println("2. Resta");
+ System.out.println("3. Multiplicación");
+ System.out.println("4. División");
+ int opcion = scanner.nextInt();
+ 
+ double resultado = 0;
+ switch (opcion) {
+ case 1:
+ resultado = num1 + num2;
+ break;
+ case 2:
+ resultado = num1 - num2;
+ break;
+ case 3:
+ resultado = num1 * num2;
+ break;
+ case 4:
+ if (num2 != 0) {
+ resultado = num1 / num2;
+ } else {
+ System.out.println("No se puede dividir por cero.");
+ return;
+ }
+ break;
+ default:
+ System.out.println("Opción no válida.");
+ return;
+ }
+ 
+ System.out.println("El resultado es: " + resultado);
+ }
+
+}
                 //calculadora
                 System.out.println("opcion de calculadora");
                     break;
