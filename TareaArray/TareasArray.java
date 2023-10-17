@@ -8,17 +8,17 @@ public class TareasArray {
     Scanner entrada = new Scanner(System.in);
 
     public static void main(String[] args) {
-        TareasArray tareas = new TareasArray();
+        Tareas tareas = new Tareas();
         tareas.menu();
     }
 
     public void menu() {
         do {
             System.out.println("Elija una opcion deseada");
-            System.out.println("1.- Tarea 1: Calcular la suma de los numeros enteros y negativos y el promedio de los números");
-            System.out.println("2.- Tarea 2: Mostrar el promedio de los números en las posiciones pares");
-            System.out.println("3.- Tarea 3: evaluaciones");
-            System.out.println("4.- Retirarse");
+            System.out.println("1.- Tarea 1: suma de numeros enteros positivos y negativos y sacarles el promedio");
+            System.out.println("2.- Tarea 2: mostrar el promedio de las posiciones pares del Array");
+            System.out.println("3.- Tarea 3: Calificaciones");
+            System.out.println("4.- salir");
             opcion = entrada.nextInt();
 
             switch (opcion) {
@@ -109,6 +109,5 @@ public class TareasArray {
         }
         System.out.println("Alumnos aprobados: " + aprobados);
         System.out.println("Alumnos reprobados: " + reprobados);
-
     }
 }
