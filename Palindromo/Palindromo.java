@@ -56,7 +56,6 @@ public class Palindromo {
        System.out.println("Es palindromo");
     else
        System.out.println("No es palindromo");
-       System.out.println("Deseas repetir el programa? , escribe s para si");
 
     }
 }
