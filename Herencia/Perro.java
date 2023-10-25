@@ -28,4 +28,7 @@ public void mostrarCapibara(){
     +"El Perro tiene la edad:"+getEdad()+"\n");
 }
 
+public void mostrarPerro() {
+}
+
 }

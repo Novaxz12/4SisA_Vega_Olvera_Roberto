@@ -26,6 +26,9 @@ package Herencia;
           +"Se Alimenta de: "+getTipo_Alimento()+"\n"
           +"El Conejo tiene la edad:"+getEdad()+"\n");
       }
+
+    public void mostrarConejo() {
+    }
   }
 
      

@@ -26,6 +26,9 @@ package Herencia;
           +"Se Alimenta de: "+getTipo_Alimento()+"\n"
           +"El Uron tiene la edad:"+getEdad()+"\n");
       }
+
+    public void mostrarHuron() {
+    }
   }
 
      

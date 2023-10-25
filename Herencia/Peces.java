@@ -26,6 +26,12 @@ public class Peces extends Animal {
           +"Se Alimenta de: "+getTipo_Alimento()+"\n"
           +"El Pez tiene la edad:"+getEdad()+"\n");
       }
+
+    public void mostrarPeces() {
+    }
+
+    public void mostrarTortuga() {
+    }
   }
 
      
